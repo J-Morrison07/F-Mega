@@ -9,8 +9,9 @@ public class Menu : MonoBehaviour
     private int TutorialScene = 1;
     private int MenuScene = 2;
     [SerializeField] private GameObject GameModes;
-    [SerializeField] private GameObject Track;
-    [SerializeField] private GameObject Car;
+    [SerializeField] private GameObject TrackMenu;
+    [SerializeField] private GameObject CarMenu;
+    [SerializeField] private GameObject CarModel;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,8 @@ public class Menu : MonoBehaviour
     public void onTimeAttackClick()
     {
         GameModes.SetActive(false);
-        Car.SetActive(true);
+        CarMenu.SetActive(true);
+        CarModel.SetActive(true);
     }
     public void onChampionshipClick()
     {
@@ -51,13 +53,20 @@ public class Menu : MonoBehaviour
     public void onFreeRaceClick()
     {
         GameModes.SetActive(false);
-        Car.SetActive(true);
+        CarMenu.SetActive(true);
+        CarModel.SetActive(true);
     }
 
-    public void onSetClick()
+    public void onCarSetClick()
     {
-        Car.SetActive(false);
-        Track.SetActive(true);
+        CarMenu.SetActive(false);
+        CarModel.SetActive(false);
+        TrackMenu.SetActive(true);
+    }
+
+    public void onTrackSetClick()
+    {
+        TrackMenu.SetActive(false);
     }
 
     public void Quit()
