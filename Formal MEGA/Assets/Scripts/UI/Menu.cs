@@ -12,6 +12,9 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject TrackMenu;
     [SerializeField] private GameObject CarMenu;
     [SerializeField] private GameObject CarModel;
+    [SerializeField] private GameObject HoloTable;
+    [SerializeField] private GameObject[] CarModels;
+    [SerializeField] private GameObject[] RaceBalls;
 
     // Start is called before the first frame update
     void Start()
@@ -62,11 +65,39 @@ public class Menu : MonoBehaviour
         CarMenu.SetActive(false);
         CarModel.SetActive(false);
         TrackMenu.SetActive(true);
+        HoloTable.SetActive(true);
     }
 
     public void onTrackSetClick()
     {
         TrackMenu.SetActive(false);
+        HoloTable.SetActive(false);
+
+    }
+
+    //Cars
+    public void onCar01Click()
+    {
+        for(int i = 0; i < CarModels.Length; i++) {
+            CarModels[i].SetActive(false);
+        }
+        CarModels[0].SetActive(true);
+    }
+    public void onCar02Click()
+    {
+        for (int i = 0; i < CarModels.Length; i++)
+        {
+            CarModels[i].SetActive(false);
+        }
+        CarModels[1].SetActive(true);
+    }
+    public void onCar03Click()
+    {
+        for (int i = 0; i < CarModels.Length; i++)
+        {
+            CarModels[i].SetActive(false);
+        }
+        CarModels[2].SetActive(true);
     }
 
     public void Quit()
