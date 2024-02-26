@@ -27,12 +27,14 @@ public class Menu : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Cursor.lockState = CursorLockMode.None;
+
     }
 
     public void onStartClick()
@@ -93,6 +95,7 @@ public class Menu : MonoBehaviour
         }
         CarModels[0].SetActive(true);
         Car = 1;
+        StaticData.Car = Car;
     }
     public void onCar02Click()
     {
@@ -102,6 +105,7 @@ public class Menu : MonoBehaviour
         }
         CarModels[1].SetActive(true);
         Car = 2;
+        StaticData.Car = Car;
     }
     public void onCar03Click()
     {
@@ -111,6 +115,7 @@ public class Menu : MonoBehaviour
         }
         CarModels[2].SetActive(true);
         Car = 3;
+        StaticData.Car = Car;
     }
 
     // Tracks
